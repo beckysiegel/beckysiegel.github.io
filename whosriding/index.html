@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+
+    <style>
+      body {
+        font-size: 50px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 0;
+      }
+
+      header {
+        background-color: #FC4C02;
+        color: white;
+        font-size: 45px;
+        height: 40px;
+        padding: 30px;
+      }
+
+      section {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+</style>
+
+        <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+  <script type="text/javascript">
+
+                function gup( name, url ) {
+                  if (!url) url = location.href;
+                  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+                  var regexS = "[\\?&]"+name+"=([^&#]*)";
+                  var regex = new RegExp( regexS );
+                  var results = regex.exec( url );
+                  return results == null ? null : results[1];
+                }
+
+                document.addEventListener("DOMContentLoaded", function(event) {
+                        var code = gup('code', window.location)
+                        window.location.replace("whosriding://?code="+code);
+                });
+
+        </script>
+
+  </head>
+  <body>
+
+  <header>All Done!</header>
+  <section>Thank you, you have authenticated!
+  <p>Click done in the upper left to dismiss and view your Strava Events and Announcements</p></section>
+  </body>
+</html>
+
